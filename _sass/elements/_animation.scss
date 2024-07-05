@@ -1,0 +1,81 @@
+/* 2.01 - CSS Animations - Start
+================================================== */
+.line_wrap {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  z-index: -1;
+  display: block;
+  position: fixed;
+  transform: translateX(-50%);
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+.line_wrap:before {
+  width: 1px;
+  left: -1px;
+  content: "";
+  height: 100px;
+  position: absolute;
+  animation: lineAnimate 15s ease-out infinite;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15), transparent);
+}
+.line_wrap .line_item {
+  width: 20%;
+  float: left;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+}
+.line_wrap .line_item:before {
+  width: 1px;
+  right: -1px;
+  content: "";
+  height: 100px;
+  position: absolute;
+}
+.line_wrap .line_item:nth-child(odd):before {
+  animation: lineMove 15s ease-out infinite;
+  background-image: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.15));
+}
+.line_wrap .line_item:nth-child(even):before {
+  animation: lineAnimate 15s ease-out infinite;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15), transparent);
+}
+
+@keyframes lineAnimate {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.5;
+  }
+}
+@keyframes lineMove {
+  0% {
+    opacity: 1;
+    bottom: 0px;
+  }
+  50% {
+    bottom: 50%;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0.5;
+  }
+}
+
+.splitting.animated .char {
+  -webkit-animation: fadeIn 0.6s cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation: fadeIn 0.6s cubic-bezier(0.3, 0, 0.7, 1) both;
+  -webkit-animation-delay: calc(20ms * var(--char-index));
+  animation-delay: calc(20ms * var(--char-index));
+}
+/* 2.01 - CSS Animations - End
+================================================== */

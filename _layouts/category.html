@@ -1,0 +1,48 @@
+---
+layout: default
+# The Category layout
+---
+
+<section class="contact_section section_space">
+    <div class="container">
+        <div class="heading_block">
+            <mark class="heading_focus_title">Category</mark>
+            <h1 class="heading_title wow mb-0" data-splitting>{{ page.title }}</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="blog_section section_space pt-0">
+  <div class="container">
+      <div class="row justify-content-md-center">
+            {% for post in page.posts %}
+            <div class="col-md-4 col-sm-10">
+                  <div class="imagebox_block blog_standard_layout">
+                      <a class="item_image" href="{{ post.url | relative_url }}">
+                          <img src="{{ post.thumbnail }}" alt="image_not_found">
+                      </a>
+                      <div class="item_content">
+                          <ul class="post_meta ul_li text-uppercase">
+                              <li> {{ post.date | date: '%Y-%m-%d' }}</li>
+                          </ul>
+                          <h3 class="item_title text_effect_wrap">
+                              <a href="{{ post.url }}">
+                                  <span class="text_effect_wrap1">
+                                      <span class="text_effect_wrap2">
+                                          <span class="text_effect_wrap3">{{ post.title }}</span>
+                                      </span>
+                                  </span>
+                              </a>
+                          </h3>
+                          <p>
+                             {{ post.description }}
+                          </p>
+                          <a class="btn_text text-uppercase" href="{{ post.url | relative_url }}"><span>Read More</span> <i class="fal fa-long-arrow-right"></i></a>
+                      </div>
+                  </div>
+            </div>
+            {% endfor %}
+      </div>
+  </div>
+</section>

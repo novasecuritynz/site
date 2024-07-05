@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="{{ '../assets/images/favourite_icon.webp' | relative_url }}">
+  <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+  
+  <link href="{{ '/assets/css/animate.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/animate.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% endif %}
+  <meta property="og:title" content="{{ site.seo.meta_og_title }}" />
+  <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+  <meta property="og:url" content="{{ site.seo.meta_og_url }}" />
+  <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
+  <meta property="og:description" content="{{ site.seo.meta_og_description }}" />
+  <meta name="twitter:card" content="{{ site.seo.meta_twitter_card }}" />
+  <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
+  <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />
+</head>
+
+<body class='page {{page.bodyClass}}'>
+   
+    <!-- body_wrap - start -->
+    <div class="page_wrapper">
+         <!-- Back To Top - Start -->
+        <div class="backtotop">
+            <a href="#" class="scroll">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 9">
+                    <path d="M6.79241 0.850144C7.18293 0.45962 7.81609 0.45962 8.20662 0.850144L14.2066 6.85014C14.5971 7.24067 14.5971 7.87383 14.2066 8.26436C13.8161 8.65488 13.1829 8.65488 12.7924 8.26436L7.49951 2.97146L2.20662 8.26436C1.81609 8.65488 1.18293 8.65488 0.792405 8.26436C0.401881 7.87383 0.401881 7.24067 0.792405 6.85014L6.79241 0.850144Z" fill="white"/>
+                </svg>
+            </a>
+        </div>
+        <!-- Back To Top - End -->
+
+        <!-- Line Animation - Satrt -->
+        <div class="line_wrap">
+            <div class="line_item"></div>
+            <div class="line_item"></div>
+            <div class="line_item"></div>
+            <div class="line_item"></div>
+            <div class="line_item"></div>
+        </div>
+        <!-- Line Animation - End -->
+        
+       
+        {% include header.html headerClass='header-extra' %}
+        <!-- main body - start
+        ================================================== -->
+			<main class="page_content">
+                {{content}}
+            </main>
+        <!-- main body - end
+        ================================================== -->
+
+        <!-- footer_section - start
+        ================================================== -->
+        {% include footer.html %}
+        <!-- footer_section - end
+        ================================================== -->
+    </div>
+    <!-- body_wrap - end -->
+    
+    <script type="text/javascript" src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/wow.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/splitting.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+
+    {% include google-analytics.html %}
+    </body>
+</html>

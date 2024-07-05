@@ -1,0 +1,40 @@
+/* 2.12 - Social - Start
+================================================== */
+.social_icons_block {
+	gap: 16px;
+	a {
+		z-index: 1;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		flex: 0 0 auto;
+		position: relative;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			inset: 0;
+			z-index: -1;
+			content: '';
+			transition: .3s;
+			position: absolute;
+			transform: scale(0);
+			border-radius: inherit;
+			background: linear-gradient(-20deg, var(--bs-secondary), var(--bs-primary));
+		}
+		img {
+			width: 50px;
+			transition: .2s;
+		}
+		&:hover {
+			img {
+				transform: scale(0.8);
+			}
+			&:before {
+				transform: scale(1);
+			}
+		}
+	}
+}
+/* 2.12 - Social - End
+================================================== */

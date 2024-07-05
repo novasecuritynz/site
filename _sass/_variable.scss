@@ -1,0 +1,24 @@
+:root, [data-bs-theme=light] {
+	--bs-body-font-family: "Open Sans", sans-serif;
+	--bs-heading-font-family: "Inconsolata", monospace;
+	--bs-body-font-size: 24px;
+	--bs-body-font-weight: 400;
+	--bs-body-line-height: 1.6;
+
+	--bs-body-bg: #1F1D2B;
+	--bs-body-bg-rgb: 31, 29, 43;
+
+	--bs-body-color: #E2E2E2;
+	--bs-body-color-rgb: 226, 226, 226;
+
+	--bs-heading-color: var(--bs-white);
+
+	--bs-primary: #3081ED;
+	--bs-primary-rgb: 48, 129, 237;
+	--bs-secondary: #9B51E0;
+	--bs-secondary-rgb: 155, 81, 224;
+	--bs-dark: #212121;
+	--bs-dark-rgb: 33, 33, 33;
+
+	--bs-transition: 400ms ease;
+}

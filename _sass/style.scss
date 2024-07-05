@@ -1,0 +1,68 @@
+/* Table Of Content - start
+================================================== */
+/* 
+* Project Name   :  Nova Security – Agency & Consulting Site Template.
+* File           :  CSS Base
+* Version        :  1.0.0
+
+==================================================
+
+1 - Template Global Settings
+* - 1.01 - Template Fonts
+* - 1.02 - Template Reset
+
+2 - Template Elements
+* - 2.01 - CSS Animations
+* - 2.02 - Backtotop Button
+* - 2.03 - Spacing and Gaps
+* - 2.04 - Ordered and Unordered list
+* - 2.05 - Button
+* - 2.06 - Typography
+* - 2.07 - Form
+* - 2.08 - Carousel
+* - 2.09 - Iconblock
+* - 2.10 - Iconbox
+* - 2.11 - Imagebox
+* - 2.12 - Social
+
+3 - Template Parts
+* - 3.01 - Site Header
+* - 3.02 - Site Footer
+
+4 - Template Pages
+* - 4.01 - Home Page
+* - 4.02 - Contact Page
+
+*/
+/* Table Of Content - end
+================================================== */
+
+// Template Global Settings
+@import 'variable';
+@import 'fonts';
+@import 'reset';
+
+// Template Elements
+@import 'elements/animation';
+@import 'elements/backtotop';
+@import 'elements/space';
+@import 'elements/list';
+@import 'elements/button';
+@import 'elements/typography';
+@import 'elements/form';
+// @import 'elements/carousel';
+// @import 'elements/iconblock';
+@import 'elements/iconbox';
+@import 'elements/imagebox';
+@import 'elements/social';
+
+// Template Parts
+@import 'template-parts/header';
+@import 'template-parts/footer';
+
+// Template Pages
+@import 'templates/home';
+@import 'templates/contact';
+
+// Template Responsive For Small Devices
+@import 'responsive';

@@ -1,0 +1,48 @@
+/* 4.02 - Contact Page - Start
+================================================== */
+.contact_section {
+	[class*="shape_image_"] {
+		z-index: -1;
+		position: absolute;
+		filter: blur(150px);
+	}
+	.shape_image_1 {
+		top: 30px;
+		left: 30px;
+	}
+	.shape_image_2 {
+		right: 30px;
+		bottom: 30px;
+	}
+}
+.contact_form {
+	z-index: 1;
+	padding: 80px;
+	position: relative;
+	border-radius: 20px;
+	backdrop-filter: blur(24px);
+	background-image: linear-gradient(0deg, rgba(155, 81, 224, 0.08), rgba(48, 129, 237, 0.08));
+	&:after {
+		z-index: -1;
+		inset: -1px;
+		content: '';
+		padding: 1px;
+		position: absolute;
+		border-radius: 22px;
+		background: linear-gradient(0deg, var(--bs-primary), transparent, transparent, var(--bs-secondary));
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, 
+		linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+	}
+	.image_block {
+		margin: -40px;
+	}
+}
+.thankyou {
+	height: 400px;
+	display: flex;
+	justify-content: center;
+}
+/* 4.02 - Contact Page - End
+================================================== */

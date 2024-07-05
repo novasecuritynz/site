@@ -1,0 +1,33 @@
+/* 2.03 - Backtotop Button - Start
+================================================== */
+.backtotop {
+  right: 15px;
+  z-index: 999;
+  bottom: 60px;
+  display: none;
+  position: fixed;
+  .scroll {
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    font-size: 15px;
+    position: relative;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    &:hover {
+      color: var(--bs-dark);
+      border-color: var(--bs-primary);
+      background-color: var(--bs-primary);
+    }
+    svg {
+      width: 14px;
+      margin: 0 -1px 0 0;
+      display: inline-block;
+    }
+  }
+}
+/* 2.03 - Backtotop Button - End
+================================================== */

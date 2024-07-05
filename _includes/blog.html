@@ -1,0 +1,55 @@
+<!-- blog_section - start
+================================================== -->
+<section class="blog_section section_space">
+   <div class="container">
+      <div class="row justify-content-lg-between">
+
+         <div class="col-lg-4">
+            <div class="section_title">
+               <h2 class="small_title">
+                  Insights
+                  <span class="line"></span>
+               </h2>
+               <h3 class="big_title text_effect_wrap">
+                  <span class="text_effect_wrap1">
+                     <span class="text_effect_wrap2">
+                        <span class="text_effect_wrap3">Read our</span>
+                     </span>
+                  </span>
+                  <span class="text_effect_wrap1">
+                     <span class="text_effect_wrap2">
+                        <span class="text_effect_wrap3">recent </span>
+                     </span>
+                  </span>
+                  <span class="text_effect_wrap1">
+                     <span class="text_effect_wrap2">
+                        <span class="text_effect_wrap3">published </span>
+                     </span>
+                  </span>
+                  <span class="text_effect_wrap1">
+                     <span class="text_effect_wrap2">
+                        <span class="text_effect_wrap3">news.</span>
+                     </span>
+                  </span>
+               </h3>
+               <a class="btn_text" href="blog.html">
+                  <span>See all articles</span> 
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 0V7.50063H9.16833V1.42131L0.587991 10L0 9.41015L8.57868 0.833125H2.49418V0H10Z" fill="white"/>
+                  </svg>
+               </a>
+            </div>
+         </div>
+
+         <div class="col-lg-7">
+            {% for post in site.posts limit:3 %}
+               {% include post-card.html %}
+            {% endfor %}
+            
+         </div>
+         
+      </div>
+   </div>
+</section>
+<!-- blog_section - end
+================================================== -->

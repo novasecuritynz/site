@@ -1,0 +1,60 @@
+/* 2.07 - Form - Start
+================================================== */
+// Input 
+.form-group {
+	position: relative;
+	margin-bottom: 14px;
+
+	.form-control,
+	.form-select {
+		padding: 0 14px;
+		font-size: 16px;
+		box-shadow: none;
+		border-radius: 5px;
+		transition: 0.3s ease;
+		color: var(--bs-white);
+		caret-color: var(--bs-white);
+		background-color: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		&:focus {
+			border-color: var(--bs-secondary);
+		}
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+		&:-ms-input-placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+		&::-ms-input-placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+	}
+
+	input.form-control,
+	select.form-select {
+		height: 46px;
+	}
+	textarea.form-control {
+		padding: 14px;
+		min-height: 110px;
+	}
+}
+
+// Search Form
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+// Contact Form
+.form_row {
+	margin: -7px;
+	[class*="col-"] {
+		padding: 7px;
+	}
+}
+/* 2.07 - Form - End
+================================================== */

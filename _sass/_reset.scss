@@ -1,0 +1,145 @@
+/* 1.02 - Template Reset - Start
+================================================== */
+body {
+	margin: 0;
+	padding: 0;
+	font-size: var(--bs-body-font-size);
+	font-weight: var(--bs-body-font-weight);
+	line-height: var(--bs-body-line-height);
+	font-style: normal;
+	font-optical-sizing: auto;
+	color: var(--bs-body-color);
+	font-family: var(--bs-body-font-family);
+	background-color: var(--bs-body-bg);
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page_wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+iframe {
+	border: none;
+}
+
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active {
+	outline: none;
+}
+
+img:not([draggable]),
+embed,
+object,
+video {
+	height: auto;
+	max-width: 100%;
+}
+img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	user-select: none;
+	vertical-align: middle;
+}
+
+a {
+	outline: 0;
+	display: inline-block;
+	text-decoration: none;
+	color: var(--bs-white);
+	transition: var(--bs-transition);
+	font-family: var(--bs-body-font-family);
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+button {
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	display: inline-block;
+	color: var(--bs-white);
+	transition: var(--bs-transition);
+	font-family: var(--bs-body-font-family);
+	&:focus {
+		outline: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	color: var(--bs-white);
+	font-family: var(--bs-heading-font-family);
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+p {
+	strong {
+		font-size: 40px;
+		font-weight: 400;
+	}
+}
+
+hr {
+	opacity: 1;
+	height: 1px;
+	border: none;
+	margin: 140px 0;
+	background: linear-gradient(45deg, transparent, var(--bs-secondary), var(--bs-primary), transparent);
+}
+
+mark {
+	padding: 0;
+	background-color: transparent;
+	background: -webkit-linear-gradient(45deg, var(--bs-secondary) 0%, var(--bs-primary) 30%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// .container {
+// 	max-width: 1790px;
+// 	padding-left: 15px;
+// 	padding-right: 15px;
+// }
+
+.container-fluid {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.row {
+	margin: -15px;
+}
+[class*="col-"] {
+	padding: 15px;
+}
+
+@media ( min-width:1920px ) {
+	.container {
+		max-width: 1790px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+/* 1.02 - Template Reset - End
+================================================== */

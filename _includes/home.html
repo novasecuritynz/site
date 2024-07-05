@@ -1,0 +1,73 @@
+
+<hr class="m-0">
+
+<!-- Testimonials Section - Start
+================================================== -->
+<section class="testimonials_section section_space">
+  <div class="container">
+    <div class="heading_block">
+      <mark class="heading_focus_title">Partner Testimonials</mark>
+      <h1 class="heading_title wow mb-0" data-splitting>What Our Partners Say</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-12">
+            <div class="review_block text-center">
+              <iframe width="1268" height="712" src="https://www.youtube.com/embed/jBA7l5H39GQ" title="রমজানের ১৫টি বিশেষ আমল | আবু ত্বহা মুহাম্মদ আদনান | Abu toha adnan | taw haa tv | ramadan waz" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="review_author_logo">
+                <img src="assets/images/clients/logo_shopify.webp" alt="Logo Shopify">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="review_block text-center">
+              <p>
+                “That is really unexpected and hard to see how this escaped detection with all the testing over the years.”
+              </p>
+              <div class="review_author_logo">
+                <img src="assets/images/clients/logo_salesforce.webp" alt="Logo Salesforce">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="review_block text-center">
+              <p>
+                “This is a great discovery, and we appreciate your partnership to help us protect Microsoft customers.”
+              </p>
+              <div class="review_author_logo">
+                <img src="../assets/images/clients/logo_microsoft.webp" alt="Logo Microsoft">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section - End
+================================================== -->
+
+<hr class="m-0">
+
+<!-- Blog Section - Start
+================================================== -->
+<section class="blog_section section_space">
+  <div class="container">
+    <div class="heading_block">
+      <mark class="heading_focus_title">Blogs</mark>
+      <h1 class="heading_title wow mb-0" data-splitting>What’s New At Nova</h1>
+    </div>
+    <div class="row">
+      {% for post in site.posts limit:3 %}
+         <div class="col-lg-4 col-md-6">
+            {% include post-card.html %}
+         </div><!--  ./col -->
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Blog Section - End
+================================================== -->
+
+<hr class="m-0">

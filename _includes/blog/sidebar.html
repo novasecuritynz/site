@@ -1,0 +1,52 @@
+<!-- blog sidebar -->
+<div class="blog-sidebar">
+    {% include search.html %}
+
+    <div class="sb_widget sb_category">
+        <h3 class="sb_widget_title text-uppercase">Categories</h3>
+        {% if site.categories.size > 0 %}
+        <ul class="ul_li_block">
+            {% for category in site.categories %}
+              {% assign category_name = category[0] %}
+              <li>
+                <a href="/categories/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+              </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    <div class="sb_widget sb_recent_post">
+        <h3 class="sb_widget_title text-uppercase">Recent Post</h3>
+        {% for post in site.posts limit:3 %}
+            <div class="recent_post_item">
+                <h3 class="item_title">
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h3>
+                <span class="post_date text-uppercase">
+                    {% if site.date_format %}
+                        {{ post.date | date: site.date_format }}
+                    {% else %}
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    {% endif %}
+                </span>
+            </div>
+        {% endfor %}    
+    </div>
+
+    <div class="sb_widget sb_about">
+        <h3 class="sb_widget_title text-uppercase">About</h3>
+        <p class="mb-0">
+            Northely was hardly able to cover it and seemed ready to slide off any moment his many legs, pitifully thin compared 
+        </p>
+    </div>
+    
+    <div class="sb_widget sb_tags">
+        <h3 class="sb_widget_title text-uppercase">Social</h3>
+        <ul class="ul_li_block style2">
+            {% include social.html %}
+         </ul>
+    </div>
+</div><!-- ./sidebar -->

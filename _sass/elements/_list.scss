@@ -1,0 +1,74 @@
+/* 2.05 - Ordered and Unordered list - Start
+================================================== */
+
+// List Default Style - Start
+[class*="unordered_list"] {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  >li {
+    float: left;
+    list-style: none;
+    display: inline-block;
+  }
+}
+.unordered_list_block {
+  display: flex;
+  flex-direction: column;
+  >li {
+    width: 100%;
+    display: block;
+  }
+}
+// List Default Style - End
+
+// Icon List - Start
+.iconlist_block {
+  &.unordered_list_block {
+    gap: 16px;
+  }
+  &.unordered_list {
+    gap: 26px;
+  }
+  >li {
+    gap: 20px;
+    display: flex;
+    font-size: 24px;
+    line-height: 34px;
+    align-items: flex-start;
+  }
+  a {
+    gap: 20px;
+    display: inline-flex;
+    align-items: flex-start;
+    color: var(--bs-body-color);
+    &:hover {
+      color: var(--bs-primary);
+    }
+  }
+  .iconlist_icon {
+    width: 24px;
+    flex: 0 0 auto;
+  }
+}
+// Icon List - End
+.post_meta {
+  margin: 30px 0 20px;
+  li {
+    // display: inline-block;
+    margin-right: 20px;
+  }
+}
+.tags_primary {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0 5px;
+  }
+}
+/* 2.05 - Ordered and Unordered list - End
+================================================== */

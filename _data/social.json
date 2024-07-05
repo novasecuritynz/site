@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Linkedin",
+    "link": "https://linkedin.com/",
+    "icon": "../assets/images/icons/icon_linkedin.svg"
+  },
+  {
+    "name": "Email",
+    "link": "https://twitter.com/",
+    "icon": "../assets/images/icons/icon_email.svg"
+  }
+]

@@ -1,0 +1,66 @@
+/* 2.06 - Button - Start
+================================================== */
+
+// Buttons Group - Start
+.btns_group {
+	gap: 30px;
+	display: flex;
+	padding: 80px 0;
+	align-items: center;
+	justify-content: center;
+}
+// Buttons Group - End
+
+// Button Fill - Start
+.btn {
+	gap: 12px;
+	border: 0;
+	z-index: 1;
+	font-size: 18px;
+	overflow: hidden;
+	font-weight: 700;
+	padding: 15px 40px;
+	position: relative;
+	border-radius: 50px;
+	align-items: center;
+	display: inline-flex;
+	color: var(--bs-white);
+	justify-content: center;
+	transition: var(--bs-transition);
+	background: linear-gradient(45deg, var(--bs-secondary), var(--bs-primary));
+	.btn_icon {}
+	.btn_label {
+		position: relative;
+		transition: var(--bs-transition);
+		&:before {
+			top: 152%;
+			left: 50%;
+			width: 100%;
+			display: block;
+			position: absolute;
+			content: attr(data-text);
+			transform: translateX(-50%);
+		}
+	}
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 10px 10px 30px 0 rgba(48, 129, 237, 0.2), -10px 10px 30px 0 rgba(155, 81, 224, 0.3);
+		.btn_label {
+			transform: translateY(-152%);
+		}
+	}
+}
+
+.btn-outline {
+	padding: 13px 38px;
+	background: transparent;
+	border: 2px solid var(--bs-secondary);
+	&:hover {
+		background-color: var(--bs-secondary);
+		box-shadow: 0 10px 30px 0 rgba(155, 81, 224, 0.3);
+	}
+}
+// Button Fill - End
+
+/* 2.06 - Button - End
+================================================== */

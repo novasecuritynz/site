@@ -1,0 +1,18 @@
+<div class="sb_widget sb_search">
+	<div class="form_item mb-0">
+		<input id="sb_search_input" type="search" name="search" placeholder="Search" id="search-input" autocomplete="off">
+		<label for="sb_search_input"><i class="fal fa-search"></i></label>
+	</div>
+	<ul id="results-container"></ul>
+</div>
+
+<!-- Script pointing to search-script.js -->
+<script src="{{ '../assets/js/search.js' | relative_url }}" type="text/javascript"></script>
+
+<script>
+	SimpleJekyllSearch({
+		searchInput: document.getElementById('search-input'),
+		resultsContainer: document.getElementById('results-container'),
+		json: '/search.json'
+	});
+</script>

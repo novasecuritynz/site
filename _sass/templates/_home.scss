@@ -1,0 +1,140 @@
+/* 4.01 - Home Page - Start
+================================================== */
+
+// Hero Section - Start
+.hero_secure_image {
+	z-index: 1;
+	margin: auto;
+	max-width: 688px;
+	text-align: center;
+	position: relative;
+	[class*="shape_image_"] {
+		z-index: -1;
+		position: absolute;
+		filter: blur(150px);
+	}
+	.shape_image_1 {
+		top: -50px;
+		left: 40px;
+	}
+	.shape_image_2 {
+		right: 40px;
+		bottom: -50px;
+	}
+	.lock_image {
+		margin: auto;
+		max-width: 400px;
+		position: relative;
+		border-radius: 20px;
+		padding: 40px 40px 180px;
+		backdrop-filter: blur(14px);
+		background-image: linear-gradient(0deg, rgba(155, 81, 224, 0.08), rgba(48, 129, 237, 0.08));
+		@media (min-width: 1920px) {
+			max-width: 502px;
+		}
+		&:after {
+			inset: -1px;
+			content: '';
+			padding: 1px;
+			position: absolute;
+			border-radius: 22px;
+			background: linear-gradient(0deg, var(--bs-primary), transparent, transparent, var(--bs-secondary));
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, 
+			linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+		}
+		img {
+			margin: auto;
+			max-width: 336px;
+		}
+	}
+	.hero_funfacts_content {
+		left: 0;
+		right: 0;
+		bottom: 40px;
+		position: absolute;
+	}
+}
+
+.hero_funfacts_content {
+	z-index: 1;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	border-radius: 20px;
+	backdrop-filter: blur(14px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
+	>li {
+		flex: 0 0 auto;
+		width: 33.333%;
+		text-align: center;
+		>* {
+			display: block;
+			line-height: 1;
+		}
+	}
+	.logo {
+		img {
+			max-width: 130px;
+		}
+	}
+	span {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 6px;
+		color: var(--bs-white);
+		font-family: var(--bs-heading-font-family);
+	}
+	small {
+		font-size: 20px;
+		font-family: var(--bs-heading-font-family);
+	}
+}
+// Hero Section - End
+
+// Cake Challenge Section - Start
+.swiper-3d .swiper-slide-shadow {
+	background: transparent;
+}
+.cake_card_carousel {
+	margin: auto;
+	max-width: 500px;
+	margin-left: 0;
+}
+.cake_card_block {
+	padding: 40px;
+	height: 770px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-end;
+	.creame_fall {
+		top: -4px;
+		left: 0;
+		right: 0;
+		height: 0%;
+		overflow: hidden;
+		position: absolute;
+	}
+}
+
+.cake_card_carousel .swiper-slide {
+	overflow: hidden;
+	border-radius: 20px;
+	backdrop-filter: blur(14px);
+	background-color: rgba(31, 29, 43, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-image: linear-gradient(0deg, rgba(155, 81, 224, 0.1), rgba(48, 129, 237, 0.1));
+}
+.cake_card_carousel .swiper-slide.swiper-slide-visible.swiper-slide-active .cake_card_block .creame_fall {
+	height: 100%;
+	transition: .6s;
+	transition-delay: .1s;
+}
+// Cake Challenge Section - End
+
+/* 4.01 - Home Page - End
+================================================== */
