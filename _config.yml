@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: 'https://novasecuritynz.github.io/site/'
 permalink: /:title/
 title: 'Nova - Agency Portfolio Jekyll Theme'
 
