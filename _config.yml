@@ -1,4 +1,4 @@
-baseurl: '/site'
+baseurl: ''
 permalink: /:title/
 title: 'Nova - Agency Portfolio Jekyll Theme'
 
