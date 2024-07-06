@@ -1,12 +1,12 @@
 [
   {
     "name": "Linkedin",
-    "link": "https://linkedin.com/",
+    "link": "https://www.linkedin.com/company/nova-security-new-zealand/",
     "icon": "../assets/images/icons/icon_linkedin.svg"
   },
   {
     "name": "Email",
-    "link": "https://twitter.com/",
+    "link": "mailto:info@novasecurity.co.nz",
     "icon": "../assets/images/icons/icon_email.svg"
   }
 ]
