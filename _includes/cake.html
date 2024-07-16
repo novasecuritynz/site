@@ -82,12 +82,16 @@
                         It's a win-win: secure your system or enjoy a sweet treat!
                     </p>
                 </div>
-                <a class="btn" href="{{site.baseurl}}/contact">
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <a class="btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nova-security/30-min-meeting'});return false;">
                     <span class="btn_label" data-text="Contact us for more details!">Contact us for more details!</span>
                     <span class="btn_icon">
                         <img src="assets/images/icons/icon_plane.svg" alt="icon Plane">
                     </span>
                 </a>
+                <!-- Calendly link widget end -->
             </div>
         </div>
     </div>
