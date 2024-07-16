@@ -7,6 +7,41 @@
             <mark class="heading_focus_title">Get In Touch</mark>
             <h1 class="heading_title wow mb-0" data-splitting>Reach out, let us help!</h1>
         </div>
+
+        <!-- Calendly -->
+        <div class="row justify-content-center">
+            <div class="col-lg-9 position-relative">
+                <div class="shape_image_1">
+                    <img src="../assets/images/shapes/shape_circle_1.svg" alt="Circle Shape 1">
+                </div>
+                <div class="shape_image_2">
+                    <img src="../assets/images/shapes/shape_circle_2.svg" alt="Circle Shape 1">
+                </div>
+                <div class="contact_form">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6">
+                            <h3 class="mb-5">Let's schedule a quick 30-minute meeting</h3>
+                            <div class="form_row row">
+                                <div class="col-12">
+                                    
+                                    <button id="nova_form-button" class="btn w-100" onclick="window.open('https://calendly.com/nova-security/30-min-meeting','_blank')">
+                                        <span class="btn_label" data-text="Schedule">Schedule</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="image_block">
+                                <img src="../assets/images/about/contact_form_image.webp" alt="Contact Image">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="nova_form-status"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Form -->
         <div class="row justify-content-center">
             <div class="col-lg-9 position-relative">
                 <div class="shape_image_1">
@@ -102,7 +137,14 @@
         });
     }
     form.addEventListener("submit", handleSubmit)
+
+    document.getElementById('nova_form-button').addEventListener('click', function() {
+        document.body.classList.add('dark-background');
+        document.getElementById('calendly-widget').classList.remove('hidden');
+        document.getElementById('calendly-widget').classList.add('visible');
+    });
 </script>
+
 <hr class="m-0">
 
 
