@@ -1,6 +1,6 @@
 baseurl: ''
 permalink: /:title/
-title: 'Nova - Agency Portfolio Jekyll Theme'
+title: 'Nova Security - Secure Your Future, Today'
 
 google_analytics_id: ""
 
@@ -17,11 +17,11 @@ footer:
   copyright_text: 'You can start and finish one of these popular software landing in under a day - for free! Check the list below'
 
 seo:
-  meta_og_title: "Nova Theme"
+  meta_og_title: "Nova Security"
   meta_og_type: "website"
   meta_og_url: "https://themeplugs.com"
   meta_og_image: "g"
-  meta_og_description: "Nova - Agency Portfolio Jekyll Theme powered by Jekyll"
+  meta_og_description: "Nova - Our goal is to pioneer a safe digital landscape through our advanced penetration testing and innovative blockchain security services, empowering businesses to grow with confidence"
   meta_twitter_card: "summary"
   meta_twitter_site: "@nova"
   meta_twitter_creator: "@nova"
