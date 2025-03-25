@@ -37,3 +37,5 @@ Use Netlify to deploy this theme. This theme contains a valid and tested `netlif
 
 ### Github Pages
 This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
+
+.
