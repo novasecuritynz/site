@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How a Simple In-App Link Click Led to Full Account Takeover - A Real Penetration Testing Case Study from New Zealand Nova Security"
+title: "How a Simple In-App Link Click Led to Full Account Takeover from New Zealand Nova Security"
 date: 2025-05-20 09:30:00
 description: Nova Security explains how a session-handling flaw in a widely used mobile app left accounts exposed, and why routine penetration testing remains critical for all organisations.
 thumbnail: "../../assets/images/blogs/mobile_session_hijack.webp"
@@ -12,15 +12,17 @@ bodyClass: blog-single
 
 ## Introduction
 
-During a recent assessment, **Nova Security NZ** identified a link-handling flaw in a popular mobile application that allowed an attacker to harvest a user’s session cookie and assume full control of the account. This article explains how the issue arose, the business risks it created, and the steps organisations can take to avoid similar exposures.
+During a recent assessment, Nova Security identified a link handling flaw in a popular mobile application that allowed an attacker to steal a user’s session cookie and gain full control of the account. This article explains about this issue, the business risks it created, and the steps organisations can take to avoid similar exposures.
 
 ---
 
 ## The Vulnerability in Detail
 
-### Link Embeds: Convenience with Hidden Risk
+### In-app message links: handy but comes with hidden risks
 
-Many mobile apps embed web links that inherit the user’s logged-in session for a seamless experience. Typically, the app restricts these links to trusted domains owned by the service provider.
+In order to make user's web browser login flow seamless, many mobile apps opt-in somthing that we call "session attachment" degisn, that when a user clicks a link inside the mobile app, the mobile app would either generate an access token or directly attach any authentication tokens to the Cookies header to the web requests. This is handy because this would save developers time to integrate with a new login flow such as OAuth or SAML. 
+
+Typically, the app restricts these links to trusted domains owned by the service provider.
 
 ### What Went Wrong
 
