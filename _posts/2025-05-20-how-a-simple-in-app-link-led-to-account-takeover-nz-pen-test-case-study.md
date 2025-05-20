@@ -20,14 +20,14 @@ During a recent assessment, Nova Security identified a link handling flaw in a p
 
 ### In-app message links: handy but comes with hidden risks
 
-In order to make user's web browser login flow seamless, many mobile apps opt-in somthing that we call "session attachment" degisn, that when a user clicks a link inside the mobile app, the mobile app would either generate an access token or directly attach any authentication tokens to the Cookies header to the web requests. This is handy because this would save developers time to integrate with a new login flow such as OAuth or SAML. 
+In order to make user's web browser login flow seamless, many mobile apps opt-in somthing that we call "session attachment" design, that when a user clicks a link inside the mobile app, the mobile app would either generate an access token or directly attach any authentication tokens to the Cookies header to the web requests. This is handy because this would save developers time to integrate with a new login flow such as OAuth or SAML. 
 
 Typically, the app restricts these links to trusted domains owned by the service provider.
 
 ### What Went Wrong
 
 - The application accepted only links that matched `acme.com` or its sub-domains.
-- Validation relied solely on a regular-expression check; there was no DNS or certificate verification.
+- Validation relied solely on a regular-expression check
 - Attackers registered visually similar domains such as `acme.ai`, which satisfied the regex test.
 - When a user tapped the crafted link, the app dutifully attached the active session cookie to the outbound request, handing control to the attacker.
 
