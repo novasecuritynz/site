@@ -20,32 +20,30 @@ During a recent assessment, Nova Security identified a link handling flaw in a p
 
 ### In-app message links: handy but comes with hidden risks
 
-In order to make user's web browser login flow seamless, many mobile apps opt-in somthing that we call "session attachment" design, that when a user clicks a link inside the mobile app, the mobile app would either generate an access token or directly attach any authentication tokens to the Cookies header to the web requests. This is handy because this would save developers time to integrate with a new login flow such as OAuth or SAML. 
+To streamline the browser login flow, many mobile apps adopt what we call a "session attachment" design. When a user clicks a link inside the app, it either generates an access token or automatically attaches existing authentication tokens to the Cookie header of the web request. This approach is handy, as it saves developers from having to integrate separate login flows like OAuth or SAML. But when things go wrong, this could bring security risks to end users.
 
-Typically, the app restricts these links to trusted domains owned by the service provider.
+Additionally, mobile apps with "session attachment" designs would restricts these "session attachment" to trusted domains only, for obvious reasons since user's session data should kept private and safe.
 
 ### What Went Wrong
 
-- The application accepted only links that matched `acme.com` or its sub-domains.
-- Validation relied solely on a regular-expression check
-- Attackers registered visually similar domains such as `acme.ai`, which satisfied the regex test.
-- When a user tapped the crafted link, the app dutifully attached the active session cookie to the outbound request, handing control to the attacker.
-
-A regular expression alone cannot guarantee domain authenticity. Without added checks, session data becomes an easy target.
+- The application only accepted links matching `acme.com` or its subdomains.
+- Validation was done locally using a regular expression. If a link passed the check, the app opened it in a special in-app browser with the user’s session attached, otherwise it used the default browser without any session data.
+- Attackers registered lookalike domains with different root domains, such as `acme.ai`, that still passed the regex check.
+- When a user clicked the crafted link, the app sent the session cookie along with the request to the attacker controlled server, allowing the attacker to fully impersonate the user.
 
 ---
 
 ## Business Impact
 
-- **Account Takeover**: An attacker acquires the same privileges as the victim—viewing personal data, initiating transactions, or changing security settings.
-- **Regulatory Exposure**: Under the New Zealand Privacy Act, such breaches require mandatory reporting and may incur penalties.
-- **Reputation Risk**: Customers can lose confidence quickly when security controls appear brittle.
+- **Account Takeover**: An attacker gains the same privileges as the victim, including access to personal data and sensitive personally identifiable information (PII).
+- **Regulatory Exposure**: Under the New Zealand Privacy Act and similar laws in other jurisdictions, such breaches require mandatory reporting and may result in financial penalties.
+- **Reputation Risk**: Customers may lose trust when a company’s security controls appear insufficient.
 
 ---
 
 ## Why Ongoing Penetration Testing Matters
 
-Mobile ecosystems evolve rapidly—new OS releases, SDK updates, and attack techniques surface every month. A one-off audit cannot keep pace with this change.
+Mobile ecosystems evolve rapidly, including new OS releases, SDK updates, and attack techniques surface every month. A one-off audit cannot keep pace with this change.
 
 Regular, methodical penetration tests:
 
