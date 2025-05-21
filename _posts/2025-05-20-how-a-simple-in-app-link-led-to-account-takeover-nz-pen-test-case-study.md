@@ -60,4 +60,4 @@ Session-hijack vulnerabilities are both subtle and damaging. Addressing them bef
 ---
 
 ### Need an objective assessment of your mobile or web application?
-[Contact us](https://www.novasecurity.co.nz/contact/) for a tailored penetration-testing engagement.
+[Click here to contact us](https://www.novasecurity.co.nz/contact/) for a tailored penetration-testing engagement.
