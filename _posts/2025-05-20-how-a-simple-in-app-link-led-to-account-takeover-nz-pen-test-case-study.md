@@ -3,7 +3,7 @@ layout: page
 title: "How a Simple In-App Link Click Led to Full Account Takeover from Nova Security"
 date: 2025-05-20 09:30:00
 description: Nova Security explains how a session-handling flaw in a widely used mobile app left accounts exposed, and why routine penetration testing remains critical for all organisations.
-thumbnail: "../../assets/images/blogs/mobile_session_hijack.webp"
+thumbnail: "../../assets/images/blogs/how_a_link_led_to_account_takeover.png" 
 author: Ron Chan
 tags: ["Mobile Security", "Cybersecurity", "Session Hijacking", "Penetration Testing"]
 categories: [Technology]
