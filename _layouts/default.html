@@ -5,21 +5,25 @@
   <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="{{ '../assets/images/favourite_icon.webp' | relative_url }}">
+  <!-- CSS Dependencies -->
   <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
-  
   <link href="{{ '/assets/css/animate.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/assets/css/animate.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
 
+  <!-- SEO Meta Tags -->
   {% if page.description %}
   <meta name="description" content="{{ page.description }}" />
   {% endif %}
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="{{ site.seo.meta_og_title }}" />
   <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
   <meta property="og:url" content="{{ site.seo.meta_og_url }}" />
   <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
   <meta property="og:description" content="{{ site.seo.meta_og_description }}" />
+  
+  <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="{{ site.seo.meta_twitter_card }}" />
   <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
   <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />
@@ -67,15 +71,18 @@
     </div>
     <!-- body_wrap - end -->
     
+    <!-- JavaScript Dependencies -->
     <script type="text/javascript" src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/wow.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/splitting.min.js' | relative_url }}"></script>
+    
+    <!-- Custom JavaScript -->
     <script type="text/javascript" src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-
+    <!-- Analytics -->
     {% include google-analytics.html %}
     </body>
 </html>

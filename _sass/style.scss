@@ -20,10 +20,9 @@
 * - 2.06 - Typography
 * - 2.07 - Form
 * - 2.08 - Carousel
-* - 2.09 - Iconblock
-* - 2.10 - Iconbox
-* - 2.11 - Imagebox
-* - 2.12 - Social
+* - 2.09 - Iconbox
+* - 2.10 - Imagebox
+* - 2.11 - Social
 
 3 - Template Parts
 * - 3.01 - Site Header
@@ -50,7 +49,7 @@
 @import 'elements/button';
 @import 'elements/typography';
 @import 'elements/form';
-// @import 'elements/carousel';
+@import 'elements/carousel';
 // @import 'elements/iconblock';
 @import 'elements/iconbox';
 @import 'elements/imagebox';

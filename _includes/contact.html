@@ -1,56 +1,72 @@
-<!-- contact_section - start
+<!-- Contact Section - Start
 ================================================== -->
-
 <section class="contact_section section_space">
     <div class="container">
+        <!-- Section Header -->
         <div class="heading_block">
             <mark class="heading_focus_title">Get In Touch</mark>
             <h1 class="heading_title wow mb-0" data-splitting>Reach out, let us help!</h1>
         </div>
 
-        <!-- Calendly -->
+        <!-- Contact Options -->
         <div class="row justify-content-center">
             <div class="col-lg-9 position-relative">
+                <!-- Background Decorative Elements -->
                 <div class="shape_image_1">
                     <img src="../assets/images/shapes/shape_circle_1.svg" alt="Circle Shape 1">
                 </div>
                 <div class="shape_image_2">
-                    <img src="../assets/images/shapes/shape_circle_2.svg" alt="Circle Shape 1">
+                    <img src="../assets/images/shapes/shape_circle_2.svg" alt="Circle Shape 2">
                 </div>
+                
+                <!-- Contact Form Container -->
                 <div class="contact_form">
                     <div class="row align-items-center justify-content-lg-between">
+                        <!-- Contact Information -->
                         <div class="col-lg-6">
-                            <h3 class="mb-5">Please reach out to us at <u onclick="navigator.clipboard.writeText('info@novasecurity.co.nz')">info@novasecurity.co.nz</u> for general enquiries.</h3>
+                            <!-- Email Contact Section -->
+                            <h3 class="mb-5">
+                                Please reach out to us at 
+                                <u onclick="navigator.clipboard.writeText('info@novasecurity.co.nz')">info@novasecurity.co.nz</u> 
+                                for general enquiries.
+                            </h3>
                             <div class="form_row row">
                                 <div class="col-12">
-                                    <button class="btn w-100" onclick="copyEmail()">
+                                    <button class="btn w-100" onclick="copyEmail()" aria-label="Copy email address to clipboard">
                                         <span id="copy-email-text" class="btn_label" data-text="Copy Email Address">Copy Email Address</span>
                                     </button>
                                 </div>
                             </div>
+                            
+                            <!-- Meeting Scheduler Section -->
                             <br><br>
                             <h3 class="mb-5">Or let's schedule a 30-minute meeting!</h3>
                             <div class="form_row row">
                                 <div class="col-12">
-                                    <!-- Calendly link widget begin -->
+                                    <!-- Calendly Integration -->
                                     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
                                     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                                    <a class="btn w-100" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nova-security/30-min-meeting'});return false;">
+                                    <a class="btn w-100" 
+                                       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nova-security/30-min-meeting'});return false;" 
+                                       aria-label="Schedule a 30-minute meeting">
                                         <span class="btn_label" data-text="Schedule and Chat">Schedule and Chat</span>
-                                        <span class="btn_icon">
+                                        <span class="btn_icon" aria-hidden="true">
                                             <img src="../assets/images/icons/icon_plane.svg" alt="icon Plane">
                                         </span>
                                     </a>
-                                    <!-- Calendly link widget end -->
                                 </div>
                             </div>
-                        </div>       
+                        </div>
+                        
+                        <!-- Contact Image -->
                         <div class="col-lg-5">
                             <div class="image_block">
                                 <img src="../assets/images/about/contact_form_image.webp" alt="Contact Image">
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Status Message Container -->
                     <p id="nova_form-status"></p>
                 </div>
             </div>
@@ -58,18 +74,29 @@
     </div>
 </section>
 <!-- Contact Section - End
-          ================================================== -->
+================================================== -->
+
+<!-- Contact Page JavaScript -->
 <script>
-    function copyEmail(){
-        navigator.clipboard.writeText('info@novasecurity.co.nz');
-        document.getElementById("copy-email-text").setAttribute("data-text", "Copied!");
+    /**
+     * Copy email address to clipboard and provide user feedback
+     */
+    function copyEmail() {
+        const email = 'info@novasecurity.co.nz';
+        const buttonText = document.getElementById("copy-email-text");
+        
+        // Copy email to clipboard
+        navigator.clipboard.writeText(email);
+        
+        // Update button text to show success
+        buttonText.setAttribute("data-text", "Copied!");
+        
+        // Reset button text after 3 seconds
         setTimeout(function() {
-            document.getElementById("copy-email-text").setAttribute("data-text", "Copy Email Address");
+            buttonText.setAttribute("data-text", "Copy Email Address");
         }, 3000);
     }
 </script>
+
+<!-- Section Divider -->
 <hr class="m-0">
-
-
-<!-- contact_section - end
-================================================== -->

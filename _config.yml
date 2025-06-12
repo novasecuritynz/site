@@ -1,21 +1,37 @@
+# ==================================================
+# Nova Security - Jekyll Site Configuration
+# ==================================================
+
+# Site Settings
+# --------------------------------------------------
 baseurl: ''
 permalink: /:title/
 title: 'Nova Security - Secure Your Future, Today'
 
+# Analytics
+# --------------------------------------------------
 google_analytics_id: ""
 
+# Homepage Configuration
+# --------------------------------------------------
 homepage:
   show_call_box: true
 
+# Logo Configuration
+# --------------------------------------------------
 logo:
   main: "../../assets/images/site_logo.webp"
   main_2x: "../../assets/images/site_logo.webp"
   dark: "../../assets/images/site_logo.webp"
   dark_2x: "../../assets/images/site_logo.webp"
 
+# Footer Configuration
+# --------------------------------------------------
 footer:
   copyright_text: 'You can start and finish one of these popular software landing in under a day - for free! Check the list below'
 
+# SEO Configuration
+# --------------------------------------------------
 seo:
   meta_og_title: "Nova Security"
   meta_og_type: "website"
@@ -26,18 +42,23 @@ seo:
   meta_twitter_site: "@nova"
   meta_twitter_creator: "@nova"
 
+# Sass Configuration
+# --------------------------------------------------
 sass:
   indentWidth: 4
-  style: compact # possible values: nested expanded compact compressed
+  style: compact # Options: nested, expanded, compact, compressed
   precision: 10
   sass_dir: _sass
 
-
+# Jekyll Plugins
+# --------------------------------------------------
 plugins:
   - jekyll-environment-variables
   
 gems: ['kramdown']
 
+# Build Configuration
+# --------------------------------------------------
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -53,6 +74,8 @@ exclude:
   - Procfile
   - Rakefile
 
+# Archives Configuration
+# --------------------------------------------------
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
@@ -64,10 +87,14 @@ jekyll-archives:
     year: '/archives/year/:year/'
     month: '/archives/month/:year-:month/'
 
+# Pagination Configuration
+# --------------------------------------------------
 paginate: 10
 paginate_path: "/page:num/"
 
-# for github pages setup uncomment the code and set to your domain
-# domain: yourdomain.com      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-# url: https://yourdomain.com  # the base hostname and protocol for your site, e.g. http://example.com
-# baseurl:       # place folder name if the site is served in a subfolder   
+# GitHub Pages Configuration
+# --------------------------------------------------
+# Uncomment and configure for GitHub Pages deployment:
+# domain: yourdomain.com      # Force HTTPS domain (without http://)
+# url: https://yourdomain.com  # Base hostname and protocol
+# baseurl:                    # Subfolder if site is served in a subfolder
