@@ -107,6 +107,10 @@ Responsive For Mobile & Tablet Devices
 	}
 	.imagebox_block .imagebox_content {
 		padding: 20px 20px 30px;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		justify-content: space-between;
 	}
 	.imagebox_block p {
 		font-size: 24px;
