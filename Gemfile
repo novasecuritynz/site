@@ -14,3 +14,7 @@ group :jekyll_plugins do
     gem 'jekyll-archives'
     gem "jekyll-paginate"
   end
+
+git_source(:github) { |repo_name| "https://github.com/novasecuritynz/site" }
+
+gem "github-pages", group: :jekyll_plugins
