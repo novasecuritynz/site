@@ -13,6 +13,8 @@
 	backdrop-filter: blur(14px);
 	background-image: linear-gradient(0deg, rgba(155, 81, 224, 0.08), rgba(48, 129, 237, 0.08));
 	height: 100%;
+	display: flex;
+	flex-direction: column;
 	&:after {
 		z-index: -1;
 		inset: -1px;
@@ -43,6 +45,10 @@
 	}
 	.imagebox_content {
 		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		justify-content: space-between;
 	}
 	p {
 		font-size: 28px;
