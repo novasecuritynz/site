@@ -1,15 +1,15 @@
-<div class="imagebox_block text-center">
-   {% if post.thumbnail %}
+<div class="imagebox_block text-center d-flex flex-column h-100">
+   <!-- {% if post.thumbnail %}
    <div class="imagebox_image">
       <a href="{{ post.url }}">
          <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
       </a>
    </div>
-   {% endif %}
+   {% endif %} -->
 
-   <div class="imagebox_content">
-      <p> {{ post.title }} </p>
-      <a class="btn btn-outline" href="{{ post.url }}">
+   <div class="imagebox_content flex-grow-1 d-flex flex-column">
+      <p class="flex-grow-1"> {{ post.title }} </p>
+      <a class="btn btn-outline mt-auto" href="{{ post.url }}">
          <span class="btn_label" data-text="Read More">Read More</span>
          <span class="btn_icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
