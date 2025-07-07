@@ -57,7 +57,7 @@ a {
 	outline: 0;
 	display: inline-block;
 	text-decoration: none;
-	color: var(--bs-white);
+	color: var(--bs-primary);
 	transition: var(--bs-transition);
 	font-family: var(--bs-body-font-family);
 	&:active,
@@ -95,8 +95,7 @@ b, strong {
 
 p {
 	strong {
-		font-size: 40px;
-		font-weight: 400;
+		font-weight: 700;
 	}
 }
 

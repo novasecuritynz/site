@@ -59,6 +59,7 @@ gems: ['kramdown']
 
 # Build Configuration
 # --------------------------------------------------
+future: false
 exclude:
   - Gemfile
   - Gemfile.lock
